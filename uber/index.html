@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uber - Move the way you want</title>
+  <meta name="description"
+    content="Request a ride, hail a taxi, or explore delivery with Uber. Wherever you’re headed, get there your way.">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24'%3E%3Crect rx='5' width='24' height='24' fill='%23000000'/%3E%3Ctext x='3' y='17' font-size='12' font-family='Arial' font-weight='900' fill='%23ffffff'%3EU%3C/text%3E%3C/svg%3E">
+</head>
+
+<body>
+  <header class="elevate">
+    <div class="container nav">
+      <a href="#top" class="logo"><span class="logo-badge">U</span> Uber</a>
+      <nav class="cta">
+        <a class="btn secondary pulse" href="#download">Get the app</a>
+        <a class="btn" href="#book">Request a ride</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero fade-in" id="top">
+      <div class="hero-copy">
+        <div class="eyebrow">Move with safety</div>
+        <h1>Go anywhere, with comfort and control</h1>
+        <p class="lead">Request a ride in minutes. Professional drivers, multiple options, and transparent pricing—so
+          you always ride your way.</p>
+        <div class="cta">
+          <a class="btn" href="#book" id="book">Request now</a>
+          <a class="btn secondary" href="#download" id="download">Download app</a>
+        </div>
+      </div>
+      <div class="card hero-card float">
+        <strong>Quick estimate</strong>
+        <p class="lead">Preview your fare with surge, time, and ride option factored in.</p>
+        <form class="estimate-form" data-base="60" data-per-km="14" data-per-min="2.4" novalidate>
+          <div class="field-grid">
+            <label class="field">
+              <span>Pickup</span>
+              <input type="text" name="pickup" placeholder="e.g., Times Square" required>
+            </label>
+            <label class="field">
+              <span>Destination</span>
+              <input type="text" name="drop" placeholder="e.g., JFK Airport" required>
+            </label>
+          </div>
+          <div class="field-grid">
+            <label class="field">
+              <span>Distance (km)</span>
+              <input type="number" name="distance" min="0" step="0.1" placeholder="24" required>
+            </label>
+            <label class="field">
+              <span>Ride time (min)</span>
+              <input type="number" name="duration" min="0" step="1" placeholder="45" required>
+            </label>
+          </div>
+          <label class="field">
+            <span>Ride option</span>
+            <select name="category">
+              <option value="1">UberX</option>
+              <option value="1.2">Uber Comfort</option>
+              <option value="1.5">Uber Premier</option>
+              <option value="1.8">UberXL</option>
+            </select>
+          </label>
+          <div class="form-actions">
+            <button class="btn" type="submit">Get estimate</button>
+            <button class="btn secondary" type="reset">Reset</button>
+          </div>
+          <output class="estimate-output" aria-live="polite"></output>
+        </form>
+      </div>
+    </section>
+
+    <section class="features fade-in">
+      <article class="card feature">
+        <h3>Multiple ride options</h3>
+        <p>From affordable to premium, choose what fits your moment.</p>
+      </article>
+      <article class="card feature">
+        <h3>Trusted drivers</h3>
+        <p>Background checks, in-app safety features, and live support.</p>
+      </article>
+      <article class="card feature">
+        <h3>Transparent fares</h3>
+        <p>Upfront prices, route preview, and instant receipts.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="fade-in">
+    © <span id="year"></span> Uber. All rights reserved.
+  </footer>
+
+  <script src="./js/script.js" defer></script>
+
+</body>
+
+</html>

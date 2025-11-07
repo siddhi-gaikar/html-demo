@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TransX</title>
+    <meta name="description" content="Meet the team—four makers building delightful products." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./Landing_Page_Css.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">
+            <span>Trans<span class="brand-highlight">X</span></span>
+        </div>
+        <nav class="nav">
+            <div class="nav-content">
+                <div style="font-weight: 600; color: var(--brand);"></div>
+                <div class="links">
+                    <a href="#team">Team</a>
+                    <a href="#contact">Contact</a>
+                    <button class="btn"
+                        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Work with
+                        us</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero container">
+            <span class="eyebrow">Meet the makers</span>
+            <h1 class="title">Six humans, one tiny studio, big impact.</h1>
+            <p class="subtitle">We design, build, and ship delightful digital products. Here's the crew behind the
+                magic.</p>
+            <div class="cta">
+                <button class="btn btn-large"
+                    onclick="document.getElementById('team').scrollIntoView({behavior:'smooth'})">See
+                    the team</button>
+            </div>
+        </section>
+
+        <section id="team" class="team container">
+            <h2>Meet Our Team</h2>
+            <div class="grid">
+
+                <article class="card" aria-label="Team member: Padmaj, Frontend  developer">
+                    <div class="avatar">
+                        <img src="/images/Padmaj.jpg"
+                            alt="Portrait of Padmaj" />
+                    </div>
+                    <div class="content">
+                        <div class="role">Frontend  developer</div>
+                        <div class="name">Padmaj</div>
+                        
+                    </div>
+                </article>
+
+
+                <article class="card" aria-label="Team member: Parth, Backend  developer">
+                    <div class="avatar">
+                        <img src="/images/Parth.jpg"
+                            alt="Portrait of Parth" />
+                    </div>
+                    <div class="content">
+                        <div class="role">Backend  developer</div>
+                        <div class="name">Parth</div>
+                        
+                    </div>
+                </article>
+
+                <article class="card" aria-label="Team member: Aditya, Backend  developer">
+                    <div class="avatar">
+                        <img src="/images/Aaditya.jpg"
+                            alt="Portrait of Aditya" />
+                    </div>
+                    <div class="content">
+                        <div class="role">Backend  developer</div>
+                        <div class="name">Aditya</div>
+            
+                    </div>
+                </article>
+
+                <article class="card" aria-label="Team member: Anushka, Backend developer">
+                    <div class="avatar">
+                        <img src="/images/Anushka .jpg"
+                            alt="Portrait of Anushka" />
+                    </div>
+                    <div class="content">
+                        <div class="role">backend  developer</div>
+                        <div class="name">Anushka</div>
+                        
+                    </div>
+                </article>
+
+                <article class="card" aria-label="Team member: Dhanashri, ">
+                    <div class="avatar">
+                        <img src="/images/Dhanashri.jpg"
+                            alt="Portrait of Dhanashri" />
+                    </div>
+                    <div class="content">
+                        <div class="role">fronend developer</div>
+                        <div class="name">Dhanashri</div>
+                        
+                    </div>
+                </article>
+
+                <article class="card" aria-label="Team member: Siddhi, fronend developer">
+                    <div class="avatar">
+                        <img src="/images/Siddhi.jpg"
+                            alt="Portrait of Siddhi" />
+                    </div>
+                    <div class="content">
+                        <div class="role">fronend developer</div>
+                        <div class="name">Siddhi</div>
+                    </div>
+                </article>
+
+                <article class="card" aria-label="Team member:Amrita, backend developer">
+                    <div class="avatar">
+                        <img src=""
+                            alt="Portrait of Amrita" />
+                    </div>
+                    <div class="content">
+                        <div class="role">backend developer</div>
+                        <div class="name">Amrita</div>
+                    </div>
+                </article>
+
+                <article class="card" aria-label="Team member: Saniya, frontend developer">
+                    <div class="avatar">
+                        <img src=""
+                            alt="Portrait of Saniya" />
+                    </div>
+                    <div class="content">
+                        <div class="role">fronend developer</div>
+                        <div class="name">Saniya</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> TransX · All rights reserved</p>
+
+            <!-- If need then comment below code -->
+            <!-- <p style="margin-top: 10px;">
+                Connect with us:
+                <a href="#" onclick="return false;">Twitter</a> |
+                <a href="#" onclick="return false;">LinkedIn</a> |
+                <a href="#" onclick="return false;">GitHub</a>
+            </p> -->
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== '#contact' && href !== '#team') return;
+
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>
